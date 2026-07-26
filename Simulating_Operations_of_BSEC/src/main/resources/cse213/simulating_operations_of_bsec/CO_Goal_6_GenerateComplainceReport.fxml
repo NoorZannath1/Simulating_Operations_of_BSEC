@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="177.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Overall Market Compliance Report" wrappingWidth="246.13671875" />
+      <Text layoutX="61.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reporting Period:" wrappingWidth="128.8033447265625" />
+      <Text layoutX="61.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department Data Summary:" wrappingWidth="155.469970703125" />
+      <Button layoutX="222.0" layoutY="344.0" mnemonicParsing="false" onAction="#GenerateReportButton" prefHeight="25.0" prefWidth="155.0" text="Generate Report" />
+      <TableView fx:id="TableView" layoutX="85.0" layoutY="181.0" prefHeight="125.0" prefWidth="449.0">
+        <columns>
+          <TableColumn fx:id="MajorIssueTableColumn" prefWidth="153.99996948242188" text="Major Issue" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="ReportingPeriodComboBox" layoutX="225.0" layoutY="85.0" prefHeight="25.0" prefWidth="255.0" />
+      <TextField fx:id="DepartmentDataSummaryTextField" layoutX="225.0" layoutY="135.0" prefHeight="25.0" prefWidth="255.0" />
+   </children>
+</AnchorPane>

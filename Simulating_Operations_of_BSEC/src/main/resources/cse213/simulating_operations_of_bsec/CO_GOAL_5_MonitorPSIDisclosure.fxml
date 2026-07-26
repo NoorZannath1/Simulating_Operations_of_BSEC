@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="188.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monitor PSI Disclosure Timeliness" wrappingWidth="223.4700927734375" />
+      <Text layoutX="78.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disclosure ID:" wrappingWidth="101.47006225585938" />
+      <Text layoutX="78.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Submission Date:" wrappingWidth="101.47006225585938" />
+      <Text layoutX="78.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" wrappingWidth="101.47006225585938" />
+      <TextField fx:id="DisclosureIdTextField" layoutX="188.0" layoutY="106.0" prefHeight="25.0" prefWidth="261.0" />
+      <Label fx:id="StatusLabel" layoutX="188.0" layoutY="192.0" prefHeight="17.0" prefWidth="48.0" text="---" />
+      <Button layoutX="204.0" layoutY="245.0" mnemonicParsing="false" onAction="#CheckTimelinessButton" prefHeight="25.0" prefWidth="177.0" text="Check Timeliness" />
+      <DatePicker fx:id="SubmissionDateDatePicker" layoutX="188.0" layoutY="151.0" prefHeight="25.0" prefWidth="261.0" />
+   </children>
+</AnchorPane>
