@@ -3,7 +3,7 @@ package bsec.ipomanagement;
 import java.time.LocalDate;
 
 public class IPO {
-    private String ipoID, name, approvalStatus,;
+    private String ipoID, name, approvalStatus;
     private LocalDate openingDate, closingDate;
     private int shareQuantity;
     private double sharePrice;
