@@ -1,52 +1,44 @@
 package bsec.ipomanagement;
 
+import java.time.LocalDate;
+
 public class IPOApplication {
-    private int applicationId, applicantId, numberOfShares ;
-    private String companyName, status;
-    private double amountPaid;
+    private String applicationID, issuerID, ipoName, status;
+    private LocalDate submissionDate;
 
     public IPOApplication() {
     }
 
-    public IPOApplication(int applicationId, int applicantId, int numberOfShares, String companyName, String status, double amountPaid) {
-        this.applicationId = applicationId;
-        this.applicantId = applicantId;
-        this.numberOfShares = numberOfShares;
-        this.companyName = companyName;
+    public IPOApplication(String applicationID, String issuerID, String ipoName, String status, LocalDate submissionDate) {
+        this.applicationID = applicationID;
+        this.issuerID = issuerID;
+        this.ipoName = ipoName;
         this.status = status;
-        this.amountPaid = amountPaid;
+        this.submissionDate = submissionDate;
     }
 
-    public int getApplicationId() {
-        return applicationId;
+    public String getApplicationID() {
+        return applicationID;
     }
 
-    public void setApplicationId(int applicationId) {
-        this.applicationId = applicationId;
+    public void setApplicationID(String applicationID) {
+        this.applicationID = applicationID;
     }
 
-    public int getApplicantId() {
-        return applicantId;
+    public String getIssuerID() {
+        return issuerID;
     }
 
-    public void setApplicantId(int applicantId) {
-        this.applicantId = applicantId;
+    public void setIssuerID(String issuerID) {
+        this.issuerID = issuerID;
     }
 
-    public int getNumberOfShares() {
-        return numberOfShares;
+    public String getIpoName() {
+        return ipoName;
     }
 
-    public void setNumberOfShares(int numberOfShares) {
-        this.numberOfShares = numberOfShares;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setIpoName(String ipoName) {
+        this.ipoName = ipoName;
     }
 
     public String getStatus() {
@@ -57,38 +49,37 @@ public class IPOApplication {
         this.status = status;
     }
 
-    public double getAmountPaid() {
-        return amountPaid;
+    public LocalDate getSubmissionDate() {
+        return submissionDate;
     }
 
-    public void setAmountPaid(double amountPaid) {
-        this.amountPaid = amountPaid;
+    public void setSubmissionDate(LocalDate submissionDate) {
+        this.submissionDate = submissionDate;
     }
 
     @Override
     public String toString() {
         return "IPOApplication{" +
-                "applicationId=" + applicationId +
-                ", applicantId=" + applicantId +
-                ", numberOfShares=" + numberOfShares +
-                ", companyName='" + companyName + '\'' +
+                "applicationID='" + applicationID + '\'' +
+                ", issuerID='" + issuerID + '\'' +
+                ", ipoName='" + ipoName + '\'' +
                 ", status='" + status + '\'' +
-                ", amountPaid=" + amountPaid +
+                ", submissionDate=" + submissionDate +
                 '}';
     }
 
-    public boolean submitApplication() {
-        System.out.println("Application " + applicationId + " submitted successfully.");
+    public boolean submit() {
+        System.out.println("Submitting IPO Application: " + applicationID);
         return true;
     }
 
-    public boolean cancelApplication() {
-        this.status = "Cancelled";
-        System.out.println("Application " + applicationId + " cancelled.");
-        return true;
+    public void updateStatus(String newStatus) {
+        this.status = newStatus;
+        System.out.println("Application " + applicationID + " status updated to: " + newStatus);
     }
 
-    public String trackStatus() {
-        return "Current Status: " + status;
+    public String getDetails() {
+        return "Application ID: " + applicationID + ", Issuer ID: " + issuerID +
+                ", IPO Name: " + ipoName + ", Status: " + status + ", Date: " + submissionDate;
     }
 }
