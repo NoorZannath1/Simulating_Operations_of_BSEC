@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="201.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Complaint Summary Report" />
+      <Text layoutX="68.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reporting Period:" />
+      <Text layoutX="68.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Complaints:" />
+      <Text layoutX="68.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resolution Rate:" />
+      <TableView fx:id="TableView" layoutX="68.0" layoutY="172.0" prefHeight="184.0" prefWidth="236.0">
+        <columns>
+          <TableColumn fx:id="TopIssueTableColumn" prefWidth="198.66665649414062" text="Top Issue" />
+        </columns>
+      </TableView>
+      <Button layoutX="358.0" layoutY="172.0" mnemonicParsing="false" onAction="#GenerateReportButton" prefHeight="25.0" prefWidth="135.0" text="Generate Report" />
+      <ComboBox fx:id="ReportingPeriodComboBox" layoutX="208.0" layoutY="49.0" prefWidth="150.0" />
+      <Label fx:id="TotalComplaintsLabel" layoutX="208.0" layoutY="92.0" prefHeight="17.0" prefWidth="150.0" text="----" />
+      <Label fx:id="ResolutionRateLabel" layoutX="207.0" layoutY="136.0" prefHeight="17.0" prefWidth="150.0" text="----" />
+   </children>
+</AnchorPane>
